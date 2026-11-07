@@ -13,30 +13,32 @@ body {
   img { max-width: 30vh; height: auto; }      
 }
 
+header {
+    background-color: var(--brand);
+    max-width: 100%;
+    height: auto;
+    img { max-width: 5%; height: auto; }
+}
+
+
 nav ul {
   display: flex;
-  flex-wrap: column;
-  gap: 0.75rem;
+  flex-direction: column;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0; 
   font-family: var(--font-heading)
 }
 
-header {
-    background-color: var(--brand);
-    min-height: 3vh; 
-    padding: 1rem;
-    img { max-width: 5vh; height: auto; }
-}
 
 nav a {
     color: #fdfaf2;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     display: block; 
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 0.8rem;
     text-align: center;
 
     background-color: #1c616e;                         
@@ -49,8 +51,10 @@ nav a {
 
 form{
   display: flex;
-  flex-wrap: column;
+  flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
   padding: 0;
   margin: 0; 
   font-family: var(--font-text);

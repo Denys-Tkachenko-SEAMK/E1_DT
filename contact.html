@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Etusivu</title>
+    <title>Yhteys</title>
 </head>
-
 <body>
     <header>
       <nav>
@@ -22,18 +21,78 @@
     </header>
 
     <main>
-            <h2>Kuka me olemme?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <img src="images/logo.png" alt="Yrityksen logo">
-        </main>
+        <form>
+            <div>
+                <label>
+                    Auton rekisterinumero:
+                    <input type="text"
+                    name="reg-num"
+                    required
+                    required pattern="[A-Za-zÅÄÖåäö]{2,3}[- ]?[0-9]{1,3}">
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Huollon kuvaus:
+                    <textarea
+                    type="text"
+                    name="desc"
+                    required
+                    placeholder="Kerro lyhyesti mitä pitää huoltaa..."
+                    ></textarea>
+                    
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Nimi:
+                    <input type="text"
+                    name="name"
+                    required
+                    placeholder="Etunimi ja Sukunimi"
+                    >
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Puhelin n-ro:
+                    <input type="tel"
+                    name="tel"
+                    required
+                    pattern="[0-9+\s-]{6,15}"
+                    placeholder="esim. 0401234567"
+                    >
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Toivottu päivämäärä:
+                    <input type="date"
+                    name="date"
+                    id="date"
+                    required
+                    >
+                </label>
+            </div>
+
+
+            <script>
+                document.getElementById('date').min = new Date().toISOString().split('T')[0];
+            </script>
+
+            <button type="submit">Lähetä huoltopyyntö</button>
+
+        </form>
+    </main>
 
         <footer>
-            <p>
-                
-                Pertti Hakola, Omistaja ja mekaanikko
-                [sähköposti] | [numero]
-                &copy; 2026 Autokorjaamo Hakola.
-            </p>
+            <div>Pertti Hakola, Omistaja ja mekaanikko <img src="images/logo.png" alt="Yrityksen logo"></div>
+            <div>[sähköposti] | [numero]  </div>
+            <div>&copy; 2026 Autokorjaamo Hakola.</div>
         </footer>
 </body>
 </html>

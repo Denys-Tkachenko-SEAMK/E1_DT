@@ -1,0 +1,72 @@
+:root {
+    --brand: #2a7f8f;
+    --bg: #fdfaf2;
+    --text: #262626;
+    --font-heading: Georgia, serif;
+    --font-text: system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--bg); 
+  color: var(--text); 
+  font-family: var(--font-text);
+  img { max-width: 30vh; height: auto; }      
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.9rem;
+  list-style: none;
+  padding: 0; 
+  font-family: var(--font-heading)
+}
+
+header {
+    background-color: var(--brand);
+    min-height: 3vh; 
+    padding: 1rem 4rem;
+    img { max-width: 5vh; height: auto; } ;
+}
+
+nav a {
+    color: #fdfaf2;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    display: inline-block; 
+    padding: 0.75rem 1.5rem;
+
+    background-color: #1c616e;                         
+    text-decoration: none;
+    font-weight: 700;
+
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: #184f5a;
+}
+
+p{
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+main{
+    font-size: 1.2rem;
+    margin: 2rem 0rem 4rem 0rem;
+}
+
+
+
+footer {
+    background-color: var(--brand);
+    min-height: 3vh; 
+    padding: 1rem 4rem;
+    img { max-width: 2vh; height: auto; } ; 
+    color: var(--text); 
+    font-size: 0.8rem;
+    font-family: var(--font-text);
+    img { max-width: 30vh; height: auto; }
+}

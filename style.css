@@ -1,10 +1,30 @@
 :root {
+    color-scheme: light dark;
     --brand: #2a7f8f;
+    --on-brand: #ffffff;
     --bg: #fdfaf2;
     --text: #262626;
+    --cont1: #1c616e;
+    --cont2 : #184f5a ;
     --font-heading: Georgia, serif;
     --font-text: system-ui, sans-serif;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #195f70;
+    --on-brand: #ffffff;
+    --bg: #262626;
+    --text: #fdfaf2;
+    --cont1: #1e7586;
+    --cont2: #1c6675;
+  }
+}
+
+* { box-sizing: border-box; }
 
 body {
   background-color: var(--bg); 
@@ -15,6 +35,7 @@ body {
 
 header {
     background-color: var(--brand);
+    color: var(--on-brand);
     max-width: 100%;
     height: auto;
     img { max-width: 5%; height: auto; }
@@ -24,7 +45,7 @@ header {
 nav ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-s);
   list-style: none;
   padding: 0;
   margin: 0; 
@@ -33,15 +54,15 @@ nav ul {
 
 
 nav a {
-    color: #fdfaf2;
+    color: var(--on-brand);
     text-decoration: none;
     font-size: 1rem;
 
     display: block; 
-    padding: 0.6rem 0.8rem;
+    padding: var(--space-s) var(--space-m);
     text-align: center;
 
-    background-color: #1c616e;                         
+    background-color: var(--cont1);                         
     text-decoration: none;
     font-weight: 700;
 
@@ -59,8 +80,8 @@ form{
   padding: 0rem;
   margin: 0 auto; 
   font-family: var(--font-text);
-  background-color: var(--brand);
-  color: var(--bg)
+  background-color: var(--bg);
+  color: var(--text)
 
 }
 
@@ -80,19 +101,19 @@ nav a {
     font-size: 1.5rem; 
     padding: 0.75rem 1.5rem;
   }
-}
+
 
 form{
   gap: 1.9rem;
   list-style: none;
-  padding: 0rem; 
-  margin: 0rem; 
+  padding: 5rem; 
+  margin: 3rem; 
 
 }
-
+}
 
 nav a:hover {
-  background-color: #184f5a;
+  background-color: var(--cont2);
 }
 
 p{
@@ -101,7 +122,8 @@ p{
 
 main{
     font-size: 1.2rem;
-    margin: 2rem 0rem 4rem 0rem; 
+    margin: var(--space-l) 0 var(--space-xl) 0; 
+    padding-inline: var(--space-m) ;
 }
 
 h2 {margin: 4rem 0rem 0rem 0rem;
@@ -124,7 +146,7 @@ footer {
     min-height: 3vh; 
     padding: 1rem 4rem;
     img { max-width: 2vh; height: auto; } ; 
-    color: var(--text); 
+    color: var(--on-brand); 
     font-size: 0.8rem;
     font-family: var(--font-text);
     img { max-width: 6vh; height: auto; } ;
@@ -133,7 +155,7 @@ footer {
 
 table{
     background-color: var(--brand);
-    color: var(--bg);
+    color: var(--on-brand);
     margin: 20px 0;
     border-collapse: collapse;
 }
@@ -144,6 +166,14 @@ th, td {
 }
 
 th {
-    background-color: #1c616e;
-    color: var(--bg);
+    background-color: var(--cont1);
+    color: var(--on-brand);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
 }

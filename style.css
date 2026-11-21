@@ -24,7 +24,101 @@
   }
 }
 
+[hidden] {
+  display: none !important;
+}
+
 * { box-sizing: border-box; }
+
+
+
+button {
+  font: inherit;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--brand);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: var(--space-m);
+}
+
+button:hover {
+  background: var(--cont2);
+}
+
+button[aria-pressed="true"],
+button.order {
+  background: var(--brand);
+  color: var(--on-brand);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#menu-status {
+  color: var(--muted);
+  min-height: 1.5em;
+}
+
+/* Menu cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.cards > article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: var(--space-m);
+  background: var(--card);
+  border: 1px solid var(--space-m);
+  border-radius: var(--space-m);
+}
+  
+.cards h3,
+.cards p {
+  margin: 0;
+  font-size: var(--space-m);
+}
+
+.cards .price {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+.cards .tags {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cards .count {
+  min-height: 1.5em;
+  color: var(--muted);
+}
+
+.cards > .highlight {
+  background: var(--cont2);
+}
+
+.cards > .special {
+  border: 2px dashed var(--brand);
+}
+
+
+
 
 body {
   background-color: var(--bg); 
@@ -62,7 +156,7 @@ nav a {
     padding: var(--space-s) var(--space-m);
     text-align: center;
 
-    background-color: var(--cont1);                         
+    background-color: var(--cont2);                         
     text-decoration: none;
     font-weight: 700;
 
